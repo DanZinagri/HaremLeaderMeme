@@ -1,0 +1,7 @@
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\HaremLeaderMeme\Assemblies\HaremLeaderMeme.dll
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\HaremLeaderMeme\Assemblies\HaremLeaderMeme.pdb
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\HaremLeaderMeme\Source\HaremLeaderMeme\obj\Debug\HaremLeaderMeme.csproj.AssemblyReference.cache
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\HaremLeaderMeme\Source\HaremLeaderMeme\obj\Debug\HaremLeaderMeme.GeneratedMSBuildEditorConfig.editorconfig
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\HaremLeaderMeme\Source\HaremLeaderMeme\obj\Debug\HaremLeaderMeme.csproj.CoreCompileInputs.cache
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\HaremLeaderMeme\Source\HaremLeaderMeme\obj\Debug\HaremLeaderMeme.dll
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\HaremLeaderMeme\1.6\Assemblies\HaremLeaderMeme.dll

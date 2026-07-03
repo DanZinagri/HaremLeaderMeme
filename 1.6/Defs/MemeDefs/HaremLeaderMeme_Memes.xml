@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <MemeDef>
+    <defName>LeadersHarem</defName>
+    <label>leader's harem</label>
+    <description>Whoever leads us answers to no limit on love. However many spouses the leader can win and keep is their sacred right alone - the rest of the faithful still live by the customs that bind ordinary marriages.</description>
+    <iconPath>UI/Memes/Haremancer</iconPath>
+    <category>Normal</category>
+    <impact>1</impact>
+    <generalRules>
+      <rulesStrings>
+        <li>memeLeaderNoun->consort-keeper</li>
+        <li>memeLeaderAdjective->favored</li>
+      </rulesStrings>
+    </generalRules>
+  </MemeDef>
+
+</Defs>

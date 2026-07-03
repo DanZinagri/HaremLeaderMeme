@@ -1,0 +1,30 @@
+using RimWorld;
+using Verse;
+
+namespace HaremLeaderMeme
+{
+	// Identical to the vanilla PreceptComp_UnwillingToDo_Gendered, except the leader can ignore normal precept restrictions.
+	// that ideo has the LeadersHarem meme. Everyone else, and leaders of ideos without the meme, fall through to the normal vanilla check.
+	public class PreceptComp_UnwillingToDo_Gendered_LeaderExempt : PreceptComp_UnwillingToDo_Gendered
+	{
+		public override bool MemberWillingToDo(HistoryEvent ev)
+		{
+			if (ev.args.TryGetArg(HistoryEventArgsNames.Doer, out Pawn doer) && IsExemptIdeoLeader(doer))
+			{
+				return true;
+			}
+			return base.MemberWillingToDo(ev);
+		}
+
+		private static bool IsExemptIdeoLeader(Pawn pawn)
+		{
+			Ideo ideo = pawn?.Ideo;
+			if (ideo == null || !ideo.HasMeme(HaremLeaderMemeDefOf.LeadersHarem))
+			{
+				return false;
+			}
+			Precept_Role role = ideo.GetRole(pawn);
+			return role != null && role.def.leaderRole;
+		}
+	}
+}

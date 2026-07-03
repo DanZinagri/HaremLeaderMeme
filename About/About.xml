@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Leader's Harem (Ideology Meme)</name>
+	<author>DanZinagri</author>
+	<packageId>DanZinagri.HaremLeaderMeme</packageId>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<modDependencies>
+		<li>
+			<packageId>Ludeon.RimWorld.Ideology</packageId>
+			<displayName>Ideology</displayName>
+			<steamWorkshopUrl>https://store.steampowered.com/app/1392840/RimWorld__Ideology/</steamWorkshopUrl>
+			<downloadUrl>https://rimworldgame.com</downloadUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Ideology</li>
+	</loadAfter>
+	<description>Adds the "Leader's Harem" ideology meme. Ideoligions with this meme exempt whoever currently holds their Leader role from the ideoligion's spouse-count precepts.</description>
+</ModMetaData>

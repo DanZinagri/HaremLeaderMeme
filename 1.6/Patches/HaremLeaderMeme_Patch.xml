@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!--
+	Swaps the Class of every "unwilling to marry beyond N spouses" comp on the
+	vanilla SpouseCount precepts from the stock PreceptComp_UnwillingToDo_Gendered
+	to our HaremLeaderMeme.PreceptComp_UnwillingToDo_Gendered_LeaderExempt subclass.
+
+	The subclass behaves identically to the stock one UNLESS the pawn getting married
+	is currently holding their ideo's Leader role AND that ideo has the LeadersHarem
+	meme - in which case the marriage is always allowed. This means the swap is a
+	no-op for every ideoligion that doesn't have the meme.
+
+	Covers all 8 precepts (Male/Female x MaxOne/MaxTwo/MaxThree/MaxFour). MaxThree,
+	MaxFour and the higher-tier comps on MaxOne/MaxTwo only exist when Ideology is
+	loaded, same as vanilla.
+
+	SpouseCount_Male_MaxOne
+	SpouseCount_Female_MaxOne
+	SpouseCount_Male_MaxTwo
+	SpouseCount_Female_MaxTwo
+	SpouseCount_Male_MaxThree
+	SpouseCount_Female_MaxThree
+	SpouseCount_Male_MaxFour
+	SpouseCount_Female_MaxFour
+-->
+
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/PreceptDef[defName="SpouseCount_Male_MaxOne"]</xpath>
+			</li>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/PreceptDef[defName="SpouseCount_Male_MaxOne"]/comps/li[@Class="PreceptComp_UnwillingToDo_Gendered"]</xpath>
+				<attribute>Class</attribute>
+				<value>HaremLeaderMeme.PreceptComp_UnwillingToDo_Gendered_LeaderExempt</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/PreceptDef[defName="SpouseCount_Female_MaxOne"]</xpath>
+			</li>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/PreceptDef[defName="SpouseCount_Female_MaxOne"]/comps/li[@Class="PreceptComp_UnwillingToDo_Gendered"]</xpath>
+				<attribute>Class</attribute>
+				<value>HaremLeaderMeme.PreceptComp_UnwillingToDo_Gendered_LeaderExempt</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/PreceptDef[defName="SpouseCount_Male_MaxTwo"]</xpath>
+			</li>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/PreceptDef[defName="SpouseCount_Male_MaxTwo"]/comps/li[@Class="PreceptComp_UnwillingToDo_Gendered"]</xpath>
+				<attribute>Class</attribute>
+				<value>HaremLeaderMeme.PreceptComp_UnwillingToDo_Gendered_LeaderExempt</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/PreceptDef[defName="SpouseCount_Female_MaxTwo"]</xpath>
+			</li>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/PreceptDef[defName="SpouseCount_Female_MaxTwo"]/comps/li[@Class="PreceptComp_UnwillingToDo_Gendered"]</xpath>
+				<attribute>Class</attribute>
+				<value>HaremLeaderMeme.PreceptComp_UnwillingToDo_Gendered_LeaderExempt</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/PreceptDef[defName="SpouseCount_Male_MaxThree"]</xpath>
+			</li>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/PreceptDef[defName="SpouseCount_Male_MaxThree"]/comps/li[@Class="PreceptComp_UnwillingToDo_Gendered"]</xpath>
+				<attribute>Class</attribute>
+				<value>HaremLeaderMeme.PreceptComp_UnwillingToDo_Gendered_LeaderExempt</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/PreceptDef[defName="SpouseCount_Female_MaxThree"]</xpath>
+			</li>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/PreceptDef[defName="SpouseCount_Female_MaxThree"]/comps/li[@Class="PreceptComp_UnwillingToDo_Gendered"]</xpath>
+				<attribute>Class</attribute>
+				<value>HaremLeaderMeme.PreceptComp_UnwillingToDo_Gendered_LeaderExempt</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/PreceptDef[defName="SpouseCount_Male_MaxFour"]</xpath>
+			</li>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/PreceptDef[defName="SpouseCount_Male_MaxFour"]/comps/li[@Class="PreceptComp_UnwillingToDo_Gendered"]</xpath>
+				<attribute>Class</attribute>
+				<value>HaremLeaderMeme.PreceptComp_UnwillingToDo_Gendered_LeaderExempt</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/PreceptDef[defName="SpouseCount_Female_MaxFour"]</xpath>
+			</li>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/PreceptDef[defName="SpouseCount_Female_MaxFour"]/comps/li[@Class="PreceptComp_UnwillingToDo_Gendered"]</xpath>
+				<attribute>Class</attribute>
+				<value>HaremLeaderMeme.PreceptComp_UnwillingToDo_Gendered_LeaderExempt</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

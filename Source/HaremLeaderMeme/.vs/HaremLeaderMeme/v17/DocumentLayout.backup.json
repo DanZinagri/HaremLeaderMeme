@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\HaremLeaderMeme\\Source\\HaremLeaderMeme\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{900AE76F-A80C-D1CE-C89A-2822A1846A44}|HaremLeaderMeme.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\haremleadermeme\\source\\haremleadermeme\\haremleadermeme.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{900AE76F-A80C-D1CE-C89A-2822A1846A44}|HaremLeaderMeme.csproj|solutionrelative:haremleadermeme.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{900AE76F-A80C-D1CE-C89A-2822A1846A44}|HaremLeaderMeme.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\haremleadermeme\\source\\haremleadermeme\\preceptcomp_unwillingtodo_gendered_leaderexempt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{900AE76F-A80C-D1CE-C89A-2822A1846A44}|HaremLeaderMeme.csproj|solutionrelative:preceptcomp_unwillingtodo_gendered_leaderexempt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HaremLeaderMeme",
+              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\HaremLeaderMeme\\Source\\HaremLeaderMeme\\HaremLeaderMeme.csproj",
+              "RelativeDocumentMoniker": "HaremLeaderMeme.csproj",
+              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\HaremLeaderMeme\\Source\\HaremLeaderMeme\\HaremLeaderMeme.csproj",
+              "RelativeToolTip": "HaremLeaderMeme.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-07-03T15:26:17.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PreceptComp_UnwillingToDo_Gendered_LeaderExempt.cs",
+              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\HaremLeaderMeme\\Source\\HaremLeaderMeme\\PreceptComp_UnwillingToDo_Gendered_LeaderExempt.cs",
+              "RelativeDocumentMoniker": "PreceptComp_UnwillingToDo_Gendered_LeaderExempt.cs",
+              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\HaremLeaderMeme\\Source\\HaremLeaderMeme\\PreceptComp_UnwillingToDo_Gendered_LeaderExempt.cs",
+              "RelativeToolTip": "PreceptComp_UnwillingToDo_Gendered_LeaderExempt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T15:26:14.938Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
