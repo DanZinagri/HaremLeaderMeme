@@ -9,6 +9,11 @@ namespace HaremLeaderMeme
 	{
 		public override bool MemberWillingToDo(HistoryEvent ev)
 		{
+			// Same cheap eventDef check the base class does - bail out before touching Ideo/meme/role lookups, since this runs against every HistoryEvent, not just marriage ones.
+			if (eventDef != null && ev.def != eventDef)
+			{
+				return true;
+			}
 			if (ev.args.TryGetArg(HistoryEventArgsNames.Doer, out Pawn doer) && IsExemptIdeoLeader(doer))
 			{
 				return true;
