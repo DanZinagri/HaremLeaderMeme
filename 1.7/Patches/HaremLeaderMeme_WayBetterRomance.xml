@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!--
+	Way Better Romance compatibility.
+
+	Once a pawn's lovers + spouses reach the ideo's spouse limit, WBR swaps the
+	"one more partner" history event from vanilla's GotMarried_SpouseCount_* to
+	its own TookLover_LoverCount_* events, which are governed by WBR's
+	"Men's lovers" / "Women's lovers" precepts instead of the SpouseCount ones.
+	Without this swap the harem leader is unwilling to take another lover and
+	WBR breaks up with their least-liked lover/fiance every new romance.
+
+	Same comp class swap as the SpouseCount patch; one xpath covers every
+	LoverCount precept (None, MaxOne-MaxFour, both genders).
+-->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Way Better Romance</li>
+		</mods>
+		<match Class="PatchOperationAttributeSet">
+			<xpath>Defs/PreceptDef[issue="LoverCount_Male" or issue="LoverCount_Female"]/comps/li[@Class="PreceptComp_UnwillingToDo_Gendered"]</xpath>
+			<attribute>Class</attribute>
+			<value>HaremLeaderMeme.PreceptComp_UnwillingToDo_Gendered_LeaderExempt</value>
+		</match>
+	</Operation>
+
+</Patch>

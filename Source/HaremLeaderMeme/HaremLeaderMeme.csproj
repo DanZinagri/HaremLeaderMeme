@@ -1,23 +1,54 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+	<!-- One project, two builds:
+	     net48   -> 1.6/Assemblies, against the 1.6 reference assemblies.
+	     net10.0 -> 1.7/Assemblies, against the 1.7 game root. -->
 	<PropertyGroup>
-		<TargetFramework>net10.0</TargetFramework>
+		<TargetFrameworks>net48;net10.0</TargetFrameworks>
 		<LangVersion>latest</LangVersion>
 		<RootNamespace>HaremLeaderMeme</RootNamespace>
 		<AssemblyName>HaremLeaderMeme</AssemblyName>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<!-- Flattened output also flattens obj\, so give each target its own intermediate folder. -->
+		<IntermediateOutputPath>obj\$(Configuration)\$(TargetFramework)\</IntermediateOutputPath>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<GenerateDependencyFile>false</GenerateDependencyFile>
+		<ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+		<CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
 		<Nullable>disable</Nullable>
-		<!-- Point this at your own RimWorld install if it lives somewhere else. -->
-		<RimWorldManagedDir>E:\SteamLibrary\steamapps\common\RimWorld</RimWorldManagedDir>
-		<OutputPath>..\..\1.7\Assemblies\</OutputPath>
 		<DebugType>embedded</DebugType>
+		<!-- Point these at your own installs if they live somewhere else. -->
+		<RimWorld16Ref>C:\Users\DanZinagri\Documents\RimWorldModding\RimWorld-1.6-Ref</RimWorld16Ref>
+		<RimWorldManagedDir>E:\SteamLibrary\steamapps\common\RimWorld</RimWorldManagedDir>
+		<!-- Only used for the Way Better Romance compat; never shipped, and only loaded when WBR (which requires Harmony) is active. -->
+		<HarmonyRoot>E:\SteamLibrary\steamapps\workshop\content\294100\2009463077</HarmonyRoot>
 	</PropertyGroup>
 
-	<ItemGroup>
+	<PropertyGroup Condition="'$(TargetFramework)' == 'net48'">
+		<OutputPath>..\..\1.6\Assemblies\</OutputPath>
+		<FrameworkPathOverride>$(RimWorld16Ref)</FrameworkPathOverride>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(TargetFramework)' == 'net10.0'">
+		<OutputPath>..\..\1.7\Assemblies\</OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+		<Reference Include="Assembly-CSharp">
+			<HintPath>$(RimWorld16Ref)\Assembly-CSharp.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="0Harmony">
+			<HintPath>$(HarmonyRoot)\1.6\Assemblies\0Harmony.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+	</ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
 		<Reference Include="Assembly-CSharp">
 			<HintPath>$(RimWorldManagedDir)\Assembly-CSharp.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="0Harmony">
+			<HintPath>$(HarmonyRoot)\1.7\Assemblies\0Harmony.dll</HintPath>
 			<Private>false</Private>
 		</Reference>
 	</ItemGroup>

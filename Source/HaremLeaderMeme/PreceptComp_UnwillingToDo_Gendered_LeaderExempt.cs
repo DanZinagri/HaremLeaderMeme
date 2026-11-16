@@ -22,7 +22,8 @@ namespace HaremLeaderMeme
 			return base.MemberWillingToDo(ev);
 		}
 
-		private static bool IsExemptIdeoLeader(Pawn pawn)
+		// Also used by the Way Better Romance compat postfix.
+		internal static bool IsExemptIdeoLeader(Pawn pawn)
 		{
 			Ideo ideo = pawn?.Ideo;
 			if (ideo == null || !ideo.HasMeme(HaremLeaderMemeDefOf.LeadersHarem))

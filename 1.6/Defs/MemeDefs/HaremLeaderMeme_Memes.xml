@@ -8,6 +8,14 @@
     <iconPath>UI/Memes/Haremancer</iconPath>
     <category>Normal</category>
     <impact>1</impact>
+    <requireOne>
+      <li>
+        <li>HaremLeaderMeme_HaremScope_FirstLeader</li>
+        <li>HaremLeaderMeme_HaremScope_AllLeaders</li>
+        <li>HaremLeaderMeme_HaremScope_AllRoles</li>
+        <li>HaremLeaderMeme_HaremScope_AllRolesButMoralGuide</li>
+      </li>
+    </requireOne>
     <generalRules>
       <rulesStrings>
         <li>memeLeaderNoun->consort-keeper</li>

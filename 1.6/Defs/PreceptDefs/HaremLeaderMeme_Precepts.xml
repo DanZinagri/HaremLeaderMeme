@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--
+	Which role holders the Leader's Harem spouse-count exemption covers. The meme's
+	requireOne keeps exactly one of these on every harem ideo; generation always picks
+	the first-leader one (the only one with any selection weight). Ideos saved before
+	this issue existed have none of them, and the code treats that as first-leader only.
+
+	Roles are matched by roleTags so modded roles work without explicit support:
+	"Leader" covers VE Memes' triumvirs, "Moralist" is the moral guide.
+-->
+
+	<IssueDef>
+		<defName>HaremLeaderMeme_HaremScope</defName>
+		<label>harem privilege</label>
+		<iconPath>UI/Memes/Haremancer</iconPath>
+	</IssueDef>
+
+	<PreceptDef Abstract="True" Name="HaremLeaderMeme_HaremScopeBase">
+		<issue>HaremLeaderMeme_HaremScope</issue>
+		<impact>Low</impact>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+		<selectionWeight>0</selectionWeight>
+		<requiredMemes>
+			<li>LeadersHarem</li>
+		</requiredMemes>
+	</PreceptDef>
+
+	<PreceptDef ParentName="HaremLeaderMeme_HaremScopeBase">
+		<defName>HaremLeaderMeme_HaremScope_FirstLeader</defName>
+		<label>first leader only</label>
+		<description>Only the ideoligion's leader may take spouses beyond the usual limit.</description>
+		<displayOrderInIssue>0</displayOrderInIssue>
+		<selectionWeight>1</selectionWeight>
+		<defaultSelectionWeight>1</defaultSelectionWeight>
+	</PreceptDef>
+
+	<PreceptDef ParentName="HaremLeaderMeme_HaremScopeBase">
+		<defName>HaremLeaderMeme_HaremScope_AllLeaders</defName>
+		<label>all leaders</label>
+		<description>Every leader role, such as the triumvirs of a republic, may take spouses beyond the usual limit.</description>
+		<displayOrderInIssue>1</displayOrderInIssue>
+	</PreceptDef>
+
+	<PreceptDef ParentName="HaremLeaderMeme_HaremScopeBase">
+		<defName>HaremLeaderMeme_HaremScope_AllRoles</defName>
+		<label>all roles</label>
+		<description>Every holder of an ideoligious role, including the moral guide and specialists, may take spouses beyond the usual limit.</description>
+		<displayOrderInIssue>2</displayOrderInIssue>
+	</PreceptDef>
+
+	<PreceptDef ParentName="HaremLeaderMeme_HaremScopeBase">
+		<defName>HaremLeaderMeme_HaremScope_AllRolesButMoralGuide</defName>
+		<label>all roles but moral guide</label>
+		<description>Every holder of an ideoligious role except the moral guide may take spouses beyond the usual limit.</description>
+		<displayOrderInIssue>3</displayOrderInIssue>
+	</PreceptDef>
+
+</Defs>
